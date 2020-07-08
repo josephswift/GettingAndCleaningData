@@ -1,0 +1,255 @@
+---
+title: "Tidy Dataset Codebook"
+author: "Joseph Swift"
+date: "7/7/2020"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Codebook
+
+
+---------------------------------
+Feature                    Result
+------------------------ --------
+Number of observations      14220
+
+Number of variables             7
+---------------------------------
+
+
+
+
+# Codebook summary table
+
+---------------------------------------------------------------------------------
+Label   Variable                   Class         # unique  Missing  Description  
+                                                   values                        
+------- -------------------------- ----------- ---------- --------- -------------
+        **[Subject]**              integer             30  0.00 %   Subject ID of Participant            
+
+        **[Activity]**             character            6  0.00 %   The type of activity being monitored            
+
+        **[Measure]**              character           13  0.00 %   What is being measured             
+
+        **[Statistic]**            character            3  0.00 %   Is it the mean, standard deviation, or other           
+
+        **[CartesianDirection]**   character            4  27.85 %  The direction of movement in 3D space             
+
+        **[Domain]**               character            2  0.00 %   Is it a time or frequency measurement             
+
+        **[MeasurementMean]**      numeric          13860  0.00 %   The calculated mean of the measurements grouped by the other six columns             
+---------------------------------------------------------------------------------
+
+
+
+
+# Variable list
+## Subject
+
+<div class = "row">
+<div class = "col-lg-8">
+
+-----------------------------------
+Feature                      Result
+------------------------- ---------
+Variable type               integer
+
+Number of missing obs.      0 (0 %)
+
+Number of unique values          30
+
+Min. and max.                 1; 30
+-----------------------------------
+
+Subjects are assigned numbers from 1 through 30 but are otherwise anonymous
+</div>
+
+</div>
+</div>
+
+
+## Activity
+
+<div class = "row">
+<div class = "col-lg-8">
+
+-------------------------------------
+Feature                        Result
+------------------------- -----------
+Variable type               character
+
+Number of missing obs.        0 (0 %)
+
+Number of unique values             6
+
+-------------------------------------
+
+
+</div>
+
+</div>
+
+
+#### Observed factor levels: 
+- LAYING
+- SITTING
+- STANDING
+- WALKING
+- WALKING_DOWNSTAIRS
+- WALKING_UPSTAIRS
+
+
+## Measure
+
+<div class = "row">
+<div class = "col-lg-8">
+
+----------------------------------------------
+Feature                                 Result
+------------------------- --------------------
+Variable type                        character
+
+Number of missing obs.                 0 (0 %)
+
+Number of unique values                     13
+
+----------------------------------------------
+
+
+</div>
+
+</div>
+
+
+#### Observed factor levels:
+- BodyAcceleration
+- BodyAccelerationJerk
+- BodyAccelerationJerkMag
+- BodyAccelerationMag
+- BodyBodyAccelerationJerkMag
+- BodyBodyGyroscopeJerkMag
+- BodyBodyGyroscopeMag
+- BodyGyroscope
+- BodyGyroscopeJerk
+- BodyGyroscopeJerkMag
+- BodyGyroscopeMag
+- GravityAcceleration
+- GravityAccelerationMag
+
+## Statistic
+
+<div class = "row">
+<div class = "col-lg-8">
+
+-------------------------------------
+Feature                        Result
+------------------------- -----------
+Variable type               character
+
+Number of missing obs.        0 (0 %)
+
+Number of unique values             3
+
+Mode                           "mean"
+-------------------------------------
+
+
+</div>
+
+</div>
+
+
+#### Observed factor levels: 
+- mean 
+- meanFreq
+- std
+
+
+## CartesianDirection
+
+<div class = "row">
+<div class = "col-lg-8">
+
+------------------------------------------
+Feature                             Result
+------------------------- ----------------
+Variable type                    character
+
+Number of missing obs.      3960 (27.85 %)
+
+Number of unique values                  3
+
+------------------------------------------
+
+Missing values are due to measurements that are absolute magnitudes without directional attributes.
+</div>
+
+</div>
+
+
+#### Observed factor levels:
+- X (forward/backward)
+- Y (left/right)
+- Z (up/down)
+
+
+## Domain
+
+<div class = "row">
+<div class = "col-lg-8">
+
+-------------------------------------
+Feature                        Result
+------------------------- -----------
+Variable type               character
+
+Number of missing obs.        0 (0 %)
+
+Number of unique values             2
+
+-------------------------------------
+
+
+</div>
+
+</div>
+
+
+#### Observed factor levels: 
+- Frequency
+- Time
+
+## MeasurementMean
+
+<div class = "row">
+<div class = "col-lg-8">
+
+----------------------------------------
+Feature                           Result
+------------------------- --------------
+Variable type                    numeric
+
+Number of missing obs.           0 (0 %)
+
+Number of unique values            13860
+
+Median                             -0.34
+
+1st and 3rd quartiles       -0.95; -0.04
+
+Min. and max.                   -1; 0.97
+----------------------------------------
+
+This is the mean of each set of measurements grouped by the other attributes in the row.
+
+</div>
+
+</div>
+
+
